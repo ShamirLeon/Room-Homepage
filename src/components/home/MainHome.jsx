@@ -1,8 +1,8 @@
-import data from "../../../data/slides.json";
+import data from "../../data/slides.json";
 import imgAboutDark from "../../assets/image-about-dark.jpg";
 import imgAboutLight from "../../assets/image-about-light.jpg";
 
-const MainHome = (props) => {
+const MainHome = () => {
   return (
     <main className="grid grid-cols-1 lg:grid-cols-7 ">
       <img src={imgAboutDark} alt="" className="lg:col-span-2 w-full" />
