@@ -16,21 +16,24 @@ const NavBar = () => {
 
   const handleClickMenu = () => {
     setMenu(!menu);
-    refMenu.current.querySelector('#navLogo').classList.toggle('hidden')
-    refMenu.current.querySelector('#navLinks').classList.toggle('hidden')
-    refMenu.current.querySelector('#navLinks').classList.add('flex')
+    refMenu.current.querySelector("#navLogo").classList.toggle("hidden");
+    refMenu.current.querySelector("#navLinks").classList.toggle("hidden");
+    refMenu.current.querySelector("#navLinks").classList.add("flex");
   };
 
   return (
     <nav ref={refMenu} className={menu ? openMenuClass : closeMenuClass}>
       <button className="lg:hidden" onClick={handleClickMenu}>
-        {menu ? <IconClose/> : <IconHamburguer />}
+        {menu ? <IconClose /> : <IconHamburguer />}
       </button>
 
       <a href="#" className="mx-auto lg:m-0 lg:block" id="navLogo">
         <Logo />
       </a>
-      <div className="hidden gap-10 lowercase lg:text-white font-semibold lg:flex" id="navLinks">
+      <div
+        className="hidden gap-10 lowercase lg:text-white font-semibold lg:flex"
+        id="navLinks"
+      >
         <NavLink title="Home"></NavLink>
         <NavLink title="Shop"></NavLink>
         <NavLink title="About"></NavLink>
